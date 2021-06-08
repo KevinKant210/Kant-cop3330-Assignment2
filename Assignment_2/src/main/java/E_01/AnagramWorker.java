@@ -3,6 +3,10 @@ package E_01;
 import java.util.Arrays;
 import java.util.Locale;
 
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Kevin Kant
+ */
 public class AnagramWorker {
 
     public boolean IsAnagram(String s1, String s2){

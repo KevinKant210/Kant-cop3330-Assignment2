@@ -3,9 +3,9 @@ package E_01;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
-/**
- * Hello world!
- *
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Kevin Kant
  */
 public class E_01App
 {
