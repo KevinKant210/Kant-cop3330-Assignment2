@@ -22,15 +22,18 @@ public class E_03App {
 
        GrabUserVal();
 
+        i = apr/365.0;
+
+        System.out.println("It will take " + PaymentCalculator.calculateMonthsUntilPaidOff(i,b,p) + " Months to pay off your credit card");
 
     }
 
     private static void GrabUserVal() {
-        System.out.print("Pleases Enter Your Balance");
+        System.out.print("Pleases Enter Your Balance ");
         b = reader.nextFloat();
-        System.out.print("What is the APR on the car ( in percentage): ");
+        System.out.print("What is the APR on the card (in percentage): ");
         apr = reader.nextFloat()/100;
-        System.out.print("What is the monthly Payment You can make : ");
+        System.out.print("What is the monthly Payment You can make: ");
         p = reader.nextFloat();
     }
 

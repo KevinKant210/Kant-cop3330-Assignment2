@@ -23,10 +23,15 @@ p is the monthly payment.
 
 public class PaymentCalculator {
 
-    static public int calculateMonthsUntilPaidOff(int n, double i, double b , double p){
+    static public int calculateMonthsUntilPaidOff( double i, double b , double p){
+        double term1 = -1.0/30.0;
+
+        double term2 = Math.pow((1.0+i),30);
+        double term3 = Math.log(1+b/p*(1-term2));
+        double result = term1*term3/Math.log(i+1);
+
+        return (int) Math.ceil(result);
 
 
-
-        return 0;
     }
 }
