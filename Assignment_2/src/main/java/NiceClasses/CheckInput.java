@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class CheckInput {
 
-    public boolean isNum(String s){
+    public static boolean isNum(String s){
         try{
             Integer.parseInt(s);
             return true;
@@ -16,7 +16,7 @@ public class CheckInput {
         }
     }
 
-    public boolean hasNums(String s){
+    public static boolean hasNums(String s){
         char[] string = s.toCharArray();
 
         for(char c : string){
@@ -28,7 +28,7 @@ public class CheckInput {
         return false;
     }
 
-    public boolean hasSpecialChar(String s){
+    public static boolean hasSpecialChar(String s){
         char[] string = s.toCharArray();
 
         for(char c : string){
