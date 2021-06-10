@@ -22,13 +22,16 @@ public class E_30App {
 
     public static String spitLine(int startingVal, int length){
         String output = "";
+        String temp;
         for(int i = 1 ; i <= length; i++){
+            //difference is the final number does not get the extra space when formatted
             if(i == length){
-                output += startingVal*i;
+                temp = String.format("%3d",startingVal*i);
             }else {
-                output += startingVal * i + " ";
+                temp = String.format("%3d ",startingVal*i);
 
             }
+            output += temp;
 
         }
 

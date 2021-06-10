@@ -16,7 +16,8 @@ public class E_30AppTest {
     @Test
     void test_if_line_spitter_spits_valid_lines(){
 
-       assertEquals("3 6 9 12", E_30App.spitLine(3,4));
+       assertEquals("  3   6   9  12", E_30App.spitLine(3,4));
     }
+
 
 }
