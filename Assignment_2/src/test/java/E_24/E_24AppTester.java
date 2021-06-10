@@ -5,14 +5,14 @@
  *
  */
 
-package E_01;
+package E_24;
 
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class E01AppTester {
+public class E_24AppTester {
     private static final AnagramWorker anagram = new AnagramWorker();
     @Test
     public void Anagram_returns_true_with_capitals(){

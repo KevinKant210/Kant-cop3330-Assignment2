@@ -5,13 +5,11 @@
  *
  */
 
-package E_03;
-
-import NiceClasses.InputFormatter;
+package E_26;
 
 import java.util.Scanner;
 
-public class E_03App {
+public class E_26App {
     static final Scanner reader = new Scanner(System.in);
     static int n;
     static double i;

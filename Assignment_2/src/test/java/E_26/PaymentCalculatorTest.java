@@ -5,8 +5,9 @@
  *
  */
 
-package E_03;
-import static org.junit.jupiter.api.Assertions.*;
+package E_26;
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class PaymentCalculatorTest {
@@ -14,6 +15,6 @@ public class PaymentCalculatorTest {
     void Test_case_for_Payment_calc() {
 
 
-        assertEquals(70,PaymentCalculator.calculateMonthsUntilPaidOff(.12/365.0,5000,100));
+        Assertions.assertEquals(70, PaymentCalculator.calculateMonthsUntilPaidOff(.12/365.0,5000,100));
     }
 }
