@@ -23,6 +23,11 @@ public class inputValidationTest {
     }
 
     @Test
+    void name_with_one_letter_returns_1(){
+
+    }
+
+    @Test
     void is_string_single_char(){
         assertEquals(1,validator.isValidString("k"));
     }
@@ -68,5 +73,14 @@ public class inputValidationTest {
         assertTrue(validator.isValidID("AB-1234"));
     }
 
+    @Test
+    void see_if_valid_output_gives_empty_string() {
+        assertEquals("", validator.validateInput("John","Joyhnson","55555","TK-4321"));
+    }
+
+    @Test
+    void see_if_invalid_output_gives_nonempty_string(){
+        assertNotSame("", validator.validateInput("", "", "hi", "abcd"));
+    }
 
 }

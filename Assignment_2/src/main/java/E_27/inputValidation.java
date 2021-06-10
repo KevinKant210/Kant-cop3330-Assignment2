@@ -8,20 +8,45 @@
 package E_27;
 
 import NiceClasses.CheckInput;
-//import java.util.ArrayList
+import java.util.Arrays;
     import java.util.Calendar;
 
 public class inputValidation {
 
-    public static String validateInput(String firstname,String lastname, String zipcode, String ID){
-
-
+    public String validateInput(String firstname,String lastname, String zipcode, String ID){
 
         inputValidation validator = new inputValidation();
-        if(validator.isValidString(firstname) == 0){
-            String output = "First name must be filled in";
+        String output = "";
+
+        int nameholder = validator.isValidString(firstname);
+        if(nameholder == 0){
+            output += "The first name must be filled in\n";
+        }else if(nameholder == 1){
+            output += "The First Name must be at least 2 characters long \n";
+
         }
-        return "temp return";
+
+        nameholder = validator.isValidString(lastname);
+
+        if(nameholder == 0){
+            output += "The Last name must be filled out\n";
+
+        }else if(nameholder == 1){
+            output += "The Last Name must be at least 2 characters long\n";
+        }
+
+        if(!validator.isValidID(ID)){
+            output += "Employee ID must be in the format AA-1234\n";
+        }
+
+        if(!validator.isValidNum(zipcode)){
+            output += "The zipcode must be a 5 digit number\n";
+        }
+
+
+
+        return output;
+
     }
 
     public  boolean isValidID(String ID){
@@ -30,7 +55,7 @@ public class inputValidation {
         }
         char[] idHolder = ID.toCharArray();
 
-        if(Character.isAlphabetic(idHolder[0]) == false || Character.isAlphabetic(idHolder[1]) == false){
+        if(!Character.isAlphabetic(idHolder[0]) || !Character.isAlphabetic(idHolder[1])){
             return false;
         }
 
